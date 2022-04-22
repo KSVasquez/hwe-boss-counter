@@ -54,16 +54,9 @@ document.documentElement.addEventListener("fullscreenchange", () => {
 updateBar();
 
 function updateBar() {
-    let old = parseFloat(bar.style.width) + parseFloat(over.style.width);
-
     let percent = countNum / startNum * 100;
     let overPer = Math.min(Math.max(percent - 100, 0), 100);
     let newPer = Math.min(Math.max(percent, 0), 100);
-
-    let change = Math.abs(percent - old);
-    let time = 0.2 + change / 50;
-    bar.style.setProperty('--barAnimTime', time + "s");
-    over.style.setProperty('--barAnimTime', (0.2 + time) + "s");
 
     bar.style.width = newPer + "%"
     over.style.width = overPer + "%"

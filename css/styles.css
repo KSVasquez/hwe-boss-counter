@@ -89,13 +89,11 @@ h1 {
     height: 100%;
     grid-column: 1;
     grid-row: 1;
-    --barAnimTime: 0.2s;
-    transition: width var(--barAnimTime) ease-in;
+    transition: width 0.25s ease-in;
 }
 .over {
     background-color: rgb(187, 88, 81);
     width: 0%;
-    --barAnimTime: 0.2s;
 }
 #count {
     color: white;
