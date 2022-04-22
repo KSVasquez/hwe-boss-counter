@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: 24pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-weight: lighter;
+    margin: .1em;
+    text-align: center;
+}
+
+.container {
+    min-width: 6em;
+    max-width: 12em;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+.container .con {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    min-width: 2em;
+    max-width: 4em;
+}
+.number #custom {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.25em;
+    width: 100%;
+    text-align: center;
+    border-radius: 1em;
+    border: 1px solid rgb(109, 109, 109);
+    outline: none;
+    height: 1.5em;
+}
+
+.button {
+    max-width: 7em;
+}
+.button button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 1em;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#minus-btn {
+    color: rgb(212, 27, 14);
+}
+#plus-btn {
+    color: rgb(13, 177, 68);
+}
+
+
+
+.barBack {
+    background-color: rgb(109, 109, 109);
+    width: 80%;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    padding: 0;
+    display: grid;
+}
+.bar {
+    background-color: rgb(131, 23, 15);
+    padding: 0;
+    text-align: right;
+    border-radius: 15px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    --barAnimTime: 0.2s;
+    transition: width var(--barAnimTime) ease-in;
+}
+.over {
+    background-color: rgb(187, 88, 81);
+    width: 0%;
+    --barAnimTime: 0.2s;
+}
+#count {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 10;
+}
+
+#fsbutton {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#fsbutton i {
+    font-size: 50px;
+    color: rgba(109, 109, 109, 0.4)
+}
+
+/* Chrome, Safari, Edge, Opera */
+#custom::-webkit-outer-spin-button,
+#custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#custom[type=number] {
+  -moz-appearance: textfield;
+}
